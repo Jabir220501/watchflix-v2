@@ -20,7 +20,7 @@
         <div class="slider__container">
             <div class="slide-item">
                 <div class="slider-image">
-                    <img src="./assets/images/dummy/Star-Wars.jpg">
+                    <img src="https://image.tmdb.org/t/p/original//8BTsTfln4jlQrLXUBquXJ0ASQy9.jpg">
                     <div class="slider-image-overlay"></div>
                 </div>
                 <div class="slider-info">
@@ -57,7 +57,32 @@
         </div>
     </section>
     <main id="main">
-        <section></section>
+        <div class="main__wrapper">
+            <!-- Just Release -->
+            <section class="just-release row">
+                <div class="label">
+                    <h2>Just Release</h2>
+                </div>
+                <div class="just-release-slider__container row-slider__container">
+                    <div class="row-slider-card v-big">
+                        <div class="img-hover__container">
+                            <a href="#"><img src="https://image.tmdb.org/t/p/original//rJHC1RUORuUhtfNb4Npclx0xnOf.jpg"
+                                    alt=""></a>
+                        </div>
+                        <div class="slider-card-info">
+                            <div class="slider-card-info__wrapper">
+                                <h3>Uncharted</h3>
+                                <div class="slider-card-rate-and-genre">
+                                    <span><i class="fa-solid fa-star"></i> 4.8 | <span>Action • <span>Movie</span>
+                                        </span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-card-overlay"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 

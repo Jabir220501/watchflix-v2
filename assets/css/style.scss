@@ -5,8 +5,8 @@ header {
     justify-content: space-between;
     position: absolute;
     top: clamp(2.8125rem, 3.0804rem + -1.3393vw, 1.875rem);
-    left: clamp(1.875rem, 1.0714rem + 4.0179vw, 4.6875rem);
-    right: clamp(1.875rem, 1.0714rem + 4.0179vw, 4.6875rem);
+    left: var(--main_wrapper);
+    right: var(--main_wrapper);
 
     .logo {
         h2 {
@@ -63,6 +63,8 @@ header {
         position: relative;
 
         .slide-item {
+            width: 100%;
+
             .slider-image {
                 position: relative;
                 z-index: -1;
@@ -86,8 +88,8 @@ header {
             .slider-info {
                 position: absolute;
                 bottom: 0;
-                left: clamp(1.875rem, 1.0714rem + 4.0179vw, 4.6875rem);
-                right: clamp(1.875rem, 1.0714rem + 4.0179vw, 4.6875rem);
+                left: var(--main_wrapper);
+                right: var(--main_wrapper);
 
                 .slider-type-of-film {
                     margin-bottom: 20px;
@@ -186,12 +188,14 @@ header {
         }
     }
 
-    @media only screen and(min-width:1024px) {
+    @media only screen and (min-width:1024px) {
         .slider__container {
+            height: 648px;
+
             .slide-item {
                 .slider-image {
                     width: 100vw;
-                    height: 670px;
+                    height: 100%;
                 }
             }
 
@@ -222,14 +226,17 @@ header {
 
                     .slider-btn {
                         width: 175px !important;
-                        button{
+
+                        button {
                             border-radius: 16px !important;
                         }
                     }
-                    .slider-btn:not(:last-child){
+
+                    .slider-btn:not(:last-child) {
                         margin-right: 25px;
                     }
                 }
+
                 .slider-directors {
                     justify-content: flex-end !important;
                     margin-bottom: 20px;
@@ -240,3 +247,57 @@ header {
     }
 }
 
+// Cards
+.main__wrapper {
+    padding-left: var(--main_wrapper);
+}
+
+.row {
+    position: relative;
+
+    .label {
+        span {
+            // 20-25
+            font-size: clamp(1.25rem, 1.1607rem + 0.4464vw, 1.5625rem);
+            color: white;
+            font-weight: 500;
+        }
+    }
+
+    .row-slider__container {
+        display: flex;
+
+        .v-big {
+            position: relative;
+            .img-hover__container{
+                border-radius: 16px;
+                overflow: hidden;
+                img {
+                    width: 240px;
+                    height: 340px;
+                    transition: 200ms;
+                    &:hover{
+                        scale: 1.1;
+                    }
+                }
+            }
+            .slider-card-info{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                z-index: 1;
+                .slider-card-info__wrapper{
+                    
+                }
+            }
+            .slider-card-overlay {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 50%;
+                background: linear-gradient(179deg, rgba(29, 29, 29, 0) 0%, rgb(0 0 0 / 80%) 113.79%);
+                pointer-events: none;
+            }
+        }
+    }
+}

@@ -13,7 +13,7 @@
     --Black-900: #0D0C0F;
     --Black-800: #08080A;
     /* Wrapper */
-    --main_wrapper: clamp(1.875rem, 0.125rem + 8.75vw, 10.625rem);
+    --main_wrapper: clamp(1.875rem, 1.0714rem + 4.0179vw, 4.6875rem);
 }
 
 /* Basic Styling */
