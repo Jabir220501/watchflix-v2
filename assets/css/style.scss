@@ -1,61 +1,4 @@
 // Header
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    top: clamp(2.8125rem, 3.0804rem + -1.3393vw, 1.875rem);
-    left: var(--main_wrapper);
-    right: var(--main_wrapper);
-
-    .logo {
-        h2 {
-            font-weight: 700;
-            font-size: clamp(1.125rem, 0.95rem + 0.875vw, 2rem);
-        }
-    }
-
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row-reverse;
-
-        .hamburger-lines {
-            margin-left: 30px;
-
-            .line {
-                display: block;
-                height: 2px;
-                background-color: var(--White);
-                border-radius: 20px;
-            }
-
-            .line:not(:last-child) {
-                margin-bottom: 2px;
-            }
-
-            .line-1,
-            .line-2 {
-                width: 15px;
-            }
-
-            .line-3 {
-                width: 8px;
-                float: right;
-            }
-        }
-
-        .nav-menu {
-            display: none;
-        }
-    }
-
-    .auth-buttons {
-        display: none;
-    }
-}
-
 #hero {
     .slider__container {
         display: flex;
@@ -174,6 +117,7 @@ header {
                         height: 8px;
                         border-radius: 100%;
                         background-color: #565457;
+                        cursor: pointer;
                     }
 
                     .active {
@@ -248,56 +192,153 @@ header {
 }
 
 // Cards
-.main__wrapper {
-    padding-left: var(--main_wrapper);
-}
-
-.row {
+.row-slider-card {
     position: relative;
 
-    .label {
-        span {
-            // 20-25
-            font-size: clamp(1.25rem, 1.1607rem + 0.4464vw, 1.5625rem);
-            color: white;
-            font-weight: 500;
+    .img-hover__container {
+        overflow: hidden;
+    }
+
+    img{
+        transition: 200ms;
+    }
+    
+    img:hover {
+        scale: 1.1;
+    }
+
+    h3 {
+        // 12-16
+        font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+    }
+
+    span {
+        // 10-12
+        font-size: clamp(0.625rem, 0.5893rem + 0.1786vw, 0.75rem);
+        font-weight: 600;
+
+        i {
+            color: var(--Yellow);
+        }
+
+        .info_genre,
+        .info_type-of-film {
+            font-weight: 400;
+            color: var(--Grey);
         }
     }
 
-    .row-slider__container {
-        display: flex;
+    .slider-card-overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(179deg, rgba(29, 29, 29, 0) 0%, rgb(0 0 0 / 80%) 113.79%);
+        border-radius: 16px;
+        pointer-events: none;
+    }
+}
 
-        .v-big {
-            position: relative;
-            .img-hover__container{
-                border-radius: 16px;
-                overflow: hidden;
-                img {
-                    width: 240px;
-                    height: 340px;
-                    transition: 200ms;
-                    &:hover{
-                        scale: 1.1;
-                    }
-                }
-            }
-            .slider-card-info{
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                z-index: 1;
-                .slider-card-info__wrapper{
-                    
-                }
-            }
-            .slider-card-overlay {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 50%;
-                background: linear-gradient(179deg, rgba(29, 29, 29, 0) 0%, rgb(0 0 0 / 80%) 113.79%);
-                pointer-events: none;
+.vertical-large-card {
+    img {
+        width: 240px;
+        height: 340px;
+    }
+    .img-hover__container {
+        border-radius: 16px;
+    }
+    .slider-card-info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+
+        .slider-card-info__wrapper {
+            // 20-22
+            padding-left: clamp(1.25rem, 1.2143rem + 0.1786vw, 1.375rem);
+            // 20-25
+            padding-bottom: clamp(1.25rem, 1.1607rem + 0.4464vw, 1.5625rem);
+        }
+    }
+
+    @media only screen and (min-width:1024px) {
+        .img-hover__container {
+            height: 100%;
+            img {
+                width: 280px;
+                height: 100%;
             }
         }
+
+    }
+}
+
+.vertical-small-card{
+    display: flex;
+    align-items: center;
+    .card-number-order{
+        margin-right: 20px;
+        h4{
+            font-size: clamp(2.5rem, 2.375rem + 0.625vw, 2.9375rem);
+        }
+    }
+    .img-hover__container {
+        border-radius: 10px;
+        height: 100%;
+        img{
+            width: 110px;
+            height: 100%;
+        }
+    }
+    .slider-card-info{
+        height: 100%;
+        margin-left: 10px;
+        .slider-card-info__wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            .pg-age{
+                width: 48px;
+                padding: 2px 5px;
+                border-radius: 6px;
+                border: 1px solid var(--Grey);
+                background-color: unset;
+                color: var(--Grey);
+                h2{
+                    // 9-12
+                    font-size: clamp(0.5625rem, 0.5089rem + 0.2679vw, 0.75rem);
+                }
+            }
+        }
+    }
+    @media only screen and (min-width:1024px) {
+        .img-hover__container {
+
+            img {
+                width: 150px;
+            }
+        }
+    }
+}
+
+
+.horizontal-card{
+    img {
+        width: 240px;
+        height: 160px;
+    }
+    .img-hover__container {
+        border-radius: 16px;
+    }
+
+    @media only screen and (min-width:1024px) {
+        .img-hover__container {
+            img {
+                width: 280px;
+                height: 185px;
+            }
+        }
+
     }
 }

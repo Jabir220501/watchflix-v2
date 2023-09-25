@@ -10,22 +10,27 @@
         </div>
         <div class="nav-menu">
             <ul>
-                <li><a href="/">Home</a></li>
+                <li class="link-active"><a href="/">Home</a></li>
                 <li><a href="discover">Discover</a></li>
                 <li><a href="movie-release">Movie Release</a></li>
                 <li><a href="about">About</a></li>
             </ul>
         </div>
-        <div class="search-button">
+        <div class="search-button-sm">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
     </nav>
-    <div class="auth-buttons">
-        <div class="sign-up-btn auth-btn">
-            <button><a href="#">Sign Up</a></button>
+    <div class="interactive-buttons">
+        <div class="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-        <div class="login-btn auth-btn">
-            <button><a href="#">Login</a></button>
+        <div class="auth-buttons">
+            <div class="sign-up-btn auth-btn">
+                <button><a href="#">Sign Up</a></button>
+            </div>
+            <div class="login-btn auth-btn">
+                <button><a href="#">Login</a></button>
+            </div>
         </div>
     </div>
 </header>

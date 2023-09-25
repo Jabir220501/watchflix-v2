@@ -64,7 +64,7 @@
                     <h2>Just Release</h2>
                 </div>
                 <div class="just-release-slider__container row-slider__container">
-                    <div class="row-slider-card v-big">
+                    <div class="row-slider-card vertical-large-card">
                         <div class="img-hover__container">
                             <a href="#"><img src="https://image.tmdb.org/t/p/original//rJHC1RUORuUhtfNb4Npclx0xnOf.jpg"
                                     alt=""></a>
@@ -73,12 +73,68 @@
                             <div class="slider-card-info__wrapper">
                                 <h3>Uncharted</h3>
                                 <div class="slider-card-rate-and-genre">
-                                    <span><i class="fa-solid fa-star"></i> 4.8 | <span>Action • <span>Movie</span>
+                                    <span><i class="fa-solid fa-star"></i> 4.8 <span class="info_genre">| Action • <span
+                                                class="info_type-of-film">Movie</span>
                                         </span></span>
                                 </div>
                             </div>
                         </div>
                         <div class="slider-card-overlay"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Popular of the week -->
+            <section class="popular-of-the-week row">
+                <div class="label">
+                    <h2>Popular of the Week</h2>
+                </div>
+                <div class="popular-of-the-week-slider__container row-slider__container">
+                    <div class="row-slider-card vertical-small-card">
+                        <div class="card-number-order">
+                            <h4>1</h4>
+                        </div>
+                        <div class="img-hover__container">
+                            <a href="#"><img src="https://image.tmdb.org/t/p/original//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"
+                                    alt=""></a>
+                        </div>
+                        <div class="slider-card-info">
+                            <div class="slider-card-info__wrapper">
+                                <div class="pg-age">
+                                    <h4>PG-13</h4>
+                                </div>
+                                <h3>Black Adam</h3>
+                                <span class="info_genre">Action • Thriller</span>
+                                <div class="slider-card-rate-and-genre">
+                                    <span><i class="fa-solid fa-star"></i> 4.8 <span class="info_type-of-film">|
+                                            Movie</span>
+                                    </span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Movies -->
+            <section class="movies row">
+                <div class="label">
+                    <h2>Movies</h2>
+                </div>
+                <div class="movies-slider__container row-slider__container">
+                    <div class="row-slider-card horizontal-card">
+                        <div class="img-hover__container">
+                            <a href="#"><img src="https://image.tmdb.org/t/p/original//8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg"
+                                    alt=""></a>
+                        </div>
+                        <div class="slider-card-info">
+                            <div class="slider-card-info__wrapper">
+                                <h3>Ant-Man and the Wasp: Quantumania</h3>
+                            </div>
+                        </div>
+                        <div class="slider-card-rate-and-genre">
+                            <span><i class="fa-solid fa-star"></i> 4.8 <span class="info_genre">| Action • <span
+                                        class="info_type-of-film">Movie</span>
+                                </span></span>
+                        </div>
                     </div>
                 </div>
             </section>
