@@ -8,7 +8,11 @@
     <title>Watchflix | Your Home for Movie Magic</title>
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-
+    <script defer src="./assets/js/script.js"></script>
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/779df3ae2b.js" crossorigin="anonymous"></script>
 </head>
 
@@ -94,23 +98,7 @@
                     <h2>Just Release</h2>
                 </div>
                 <div class="just-release-slider__container row-slider__container">
-                    <div class="row-slider-card vertical-large-card">
-                        <div class="img-hover__container">
-                            <a href="#"><img src="https://image.tmdb.org/t/p/original//rJHC1RUORuUhtfNb4Npclx0xnOf.jpg"
-                                    alt=""></a>
-                        </div>
-                        <div class="slider-card-info">
-                            <div class="slider-card-info__wrapper">
-                                <h3>Uncharted</h3>
-                                <div class="slider-card-rate-and-genre">
-                                    <span><i class="fa-solid fa-star"></i> 4.8 <span class="info_genre">| Action • <span
-                                                class="info_type-of-film">Movie</span>
-                                        </span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-card-overlay"></div>
-                    </div>
+                    <!-- Card -->
                 </div>
             </section>
             <!-- Popular of the week -->
