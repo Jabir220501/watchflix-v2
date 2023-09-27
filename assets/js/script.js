@@ -56,3 +56,41 @@ const justReleaseList = async () => {
 
 justReleaseList();
 
+const popularOfTheWeekList = async () => {
+  try {
+    const response = await fetch(`${baseURL}/movie/popular`);
+    const data = await response.json();
+    const justRelease = document.querySelector(
+      ".popular-of-the-week-slider__container"
+    );
+    const image_url = "https://image.tmdb.org/t/p/original/";
+
+    for (const movieCard of data.results) {
+      const genreName = await getGenre(movieCard.genre_ids[0]);
+
+      const div = document.createElement("div");
+      div.classList.add("row-slider-card", "vertical-small-card");
+      div.innerHTML = `
+      <div class="img-hover__container">
+      <a href="#"><img src="https://image.tmdb.org/t/p/original//8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg"
+              alt=""></a>
+  </div>
+  <div class="slider-card-info">
+      <div class="slider-card-info__wrapper">
+          <h3>Ant-Man and the Wasp: Quantumania</h3>
+      </div>
+  </div>
+  <div class="slider-card-rate-and-genre">
+      <span><i class="fa-solid fa-star"></i> 4.8 <span class="info_genre">| Action • <span
+                  class="info_type-of-film">Movie</span>
+          </span></span>
+  </div>
+        `;
+      justRelease.appendChild(div);
+    }
+  } catch (error) {
+    console.error("Error", error);
+  }
+};
+
+popularOfTheWeekList();
