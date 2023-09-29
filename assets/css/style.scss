@@ -6,6 +6,10 @@
         overflow: hidden;
         scroll-snap-type: x mandatory;
 
+        .swiper-wrapper{
+            display: flex;
+        }
+
         .slide-item {
             width: 100%;
             position: relative;

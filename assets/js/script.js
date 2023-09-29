@@ -1,4 +1,4 @@
-const baseURL = "http://192.168.0.105:3000";
+const baseURL = "http://localhost:3000";
 
 const getGenre = async (genreID) => {
   try {
@@ -47,7 +47,7 @@ const justReleaseList = async () => {
           </div>
           <div class="slider-card-info">
             <div class="slider-card-info__wrapper">
-              <h3>${movieCard.original_title}</h3>
+              <h3>${movieCard.title}</h3>
               <div class="slider-card-rate-and-genre">
                 <span><i class="fa-solid fa-star"></i> ${roundToOneDecimalPlace(
                   movieCard.vote_average

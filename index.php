@@ -21,62 +21,64 @@
     include 'includes/header/header.php';
     ?>
     <section id="hero">
-        <div class="slider__container">
-            <div class="slide-item">
-                <div class="slider-image">
-                    <img src="https://image.tmdb.org/t/p/original//8BTsTfln4jlQrLXUBquXJ0ASQy9.jpg">
-                    <div class="slider-image-overlay"></div>
-                </div>
-                <div class="slider-info">
-                    <div class="slider-type-of-film">
-                        <button>Movie</button>
+        <div class="slider__container swiper">
+            <div class="swiper-wrapper">
+                <div class="slide-item swiper-slide">
+                    <div class="slider-image">
+                        <img src="https://image.tmdb.org/t/p/original//8BTsTfln4jlQrLXUBquXJ0ASQy9.jpg">
+                        <div class="slider-image-overlay"></div>
                     </div>
-                    <div class="slider-title">
-                        <h2>Star Wars: The Force Awaken</h2>
-                    </div>
-                    <div class="slider-film-info">
-                        <h5>2h40m • 2022 • Fantasy • Actions</h5>
-                    </div>
-                    <div class="slider-description">
-                        <p>Thirty years after defeating the Galactic Empire, Han Solo and
-                            his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.</p>
-                    </div>
-                    <div class="slider-buttons">
-                        <div class="watch-trailer-btn slider-btn">
-                            <button><i class="fa-solid fa-circle-play"></i><a href="#">Watch Trailer</a></button>
+                    <div class="slider-info">
+                        <div class="slider-type-of-film">
+                            <button>Movie</button>
                         </div>
-                        <div class="add-watchlist-btn slider-btn">
-                            <button><i class="fa-regular fa-bookmark"></i><a href="#">Add Watchlist</a></button>
+                        <div class="slider-title">
+                            <h2>Star Wars: The Force Awaken</h2>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="slide-item">
-                <div class="slider-image">
-                    <img src="https://image.tmdb.org/t/p/original//8BTsTfln4jlQrLXUBquXJ0ASQy9.jpg">
-                    <div class="slider-image-overlay"></div>
-                </div>
-                <div class="slider-info">
-                    <div class="slider-type-of-film">
-                        <button>Movie</button>
-                    </div>
-                    <div class="slider-title">
-                        <h2>Star Wars: The Force AwakenNNN</h2>
-                    </div>
-                    <div class="slider-film-info">
-                        <h5>2h40m • 2022 • Fantasy • Actions</h5>
-                    </div>
-                    <div class="slider-description">
-                        <p>Thirty years after defeating the Galactic Empire, Han Solo and
-                            his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.</p>
-                    </div>
-                    <div class="slider-buttons">
-                        <div class="watch-trailer-btn slider-btn">
-                            <button><i class="fa-solid fa-circle-play"></i><a href="#">Watch Trailer</a></button>
+                        <div class="slider-film-info">
+                            <h5>2h40m • 2022 • Fantasy • Actions</h5>
                         </div>
-                        <div class="add-watchlist-btn slider-btn">
-                            <button><i class="fa-regular fa-bookmark"></i><a href="#">Add Watchlist</a></button>
+                        <div class="slider-description">
+                            <p>Thirty years after defeating the Galactic Empire, Han Solo and
+                                his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.</p>
+                        </div>
+                        <div class="slider-buttons">
+                            <div class="watch-trailer-btn slider-btn">
+                                <button><i class="fa-solid fa-circle-play"></i><a href="#">Watch Trailer</a></button>
+                            </div>
+                            <div class="add-watchlist-btn slider-btn">
+                                <button><i class="fa-regular fa-bookmark"></i><a href="#">Add Watchlist</a></button>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="slide-item swiper-slide">
+                    <div class="slider-image">
+                        <img src="https://image.tmdb.org/t/p/original//iIvQnZyzgx9TkbrOgcXx0p7aLiq.jpg">
+                        <div class="slider-image-overlay"></div>
+                    </div>
+                    <div class="slider-info">
+                        <div class="slider-type-of-film">
+                            <button>Movie</button>
+                        </div>
+                        <div class="slider-title">
+                            <h2>Star Wars: The Force AwakenNNN</h2>
+                        </div>
+                        <div class="slider-film-info">
+                            <h5>2h40m • 2022 • Fantasy • Actions</h5>
+                        </div>
+                        <div class="slider-description">
+                            <p>Thirty years after defeating the Galactic Empire, Han Solo and
+                                his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.</p>
+                        </div>
+                        <div class="slider-buttons">
+                            <div class="watch-trailer-btn slider-btn">
+                                <button><i class="fa-solid fa-circle-play"></i><a href="#">Watch Trailer</a></button>
+                            </div>
+                            <div class="add-watchlist-btn slider-btn">
+                                <button><i class="fa-regular fa-bookmark"></i><a href="#">Add Watchlist</a></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,6 +133,27 @@
             </section>
         </div>
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 'auto',
+      direction: 'horizontal',
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+        freeMode: false,
+      },
+      keyboard: {
+      enabled: true
+    },
+      grabCursor:true,
+      lazyLoading: true,
+      renderBullet: function (index, className) {
+          // You can use this function to customize the bullet HTML
+          return '<div class="' + className + '">Bullet ' + (index + 1) + '</div>';
+        },
+    });
+  </script>
 </body>
 
 </html>

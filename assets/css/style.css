@@ -2,8 +2,10 @@
   display: flex;
   position: relative;
   overflow: hidden;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+}
+#hero .slider__container .swiper-wrapper {
+  display: flex;
 }
 #hero .slider__container .slide-item {
   width: 100%;
