@@ -168,6 +168,7 @@
   transition: 200ms;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
 }
 .row-slider-card img:hover {
   scale: 1.1;
@@ -211,6 +212,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
 }
 .vertical-large-card .img-hover__container {
   height: 100%;
@@ -261,6 +263,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
 }
 .vertical-small-card .slider-card-info {
   height: 100%;
@@ -285,6 +288,7 @@
 }
 @media only screen and (min-width: 1024px) {
   .vertical-small-card {
+    margin-right: 50px;
     height: 130px;
   }
   .vertical-small-card .img-hover__container {
@@ -295,16 +299,23 @@
   }
 }
 
+.horizontal-card {
+  width: 240px;
+}
 .horizontal-card img {
   width: 240px;
-  height: 160px;
+  height: 100%;
+  display: block;
 }
 .horizontal-card .img-hover__container {
   border-radius: 16px;
 }
 @media only screen and (min-width: 1024px) {
+  .horizontal-card {
+    width: 280px;
+  }
   .horizontal-card .img-hover__container img {
     width: 280px;
-    height: 185px;
+    height: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
