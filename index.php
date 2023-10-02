@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script defer src="./assets/js/script.js"></script>
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- JS Libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/779df3ae2b.js" crossorigin="anonymous"></script>
@@ -148,10 +146,7 @@
     },
       grabCursor:true,
       lazyLoading: true,
-      renderBullet: function (index, className) {
-          // You can use this function to customize the bullet HTML
-          return '<div class="' + className + '">Bullet ' + (index + 1) + '</div>';
-        },
+      loop: true,
     });
   </script>
 </body>
