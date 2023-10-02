@@ -11,9 +11,9 @@
     <script defer src="./assets/js/script.js"></script>
     <!-- CSS Libraries -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- JS Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://kit.fontawesome.com/779df3ae2b.js" crossorigin="anonymous"></script>
+    <?php
+    include 'includes/js-libraries.php';
+    ?>
 </head>
 
 <body>

@@ -8,12 +8,10 @@
     <title>Watchflix | Your Home for Movie Magic</title>
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- JS Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://kit.fontawesome.com/779df3ae2b.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/getDataById.js"></script>
+    <?php
+    include 'includes/js-libraries.php';
+    ?>
 </head>
 
 <body>
@@ -23,30 +21,7 @@
     <section id="hero">
         <div class="slider__container">
             <div class="swiper-wrapper">
-                <div class="slide-item">
-                    <div class="slider-image">
-                        <img src="https://image.tmdb.org/t/p/original//8BTsTfln4jlQrLXUBquXJ0ASQy9.jpg">
-                        <div class="slider-image-overlay"></div>
-                    </div>
-                    <div class="slider-info">
-                        <div class="slider-type-of-film">
-                            <button>Movie</button>
-                        </div>
-                        <div class="slider-title">
-                            <h2>Star Wars: The Force Awaken</h2>
-                        </div>
-                        <div class="slider-film-info">
-                            <h5>2h40m • 2022 • Fantasy • Actions</h5>
-                        </div>
-                        <div class="slider-buttons">
-                            <div class="watch-trailer-btn slider-btn">
-                                <button><i class="fa-solid fa-circle-play"></i><a href="#">Watch Trailer</a></button>
-                            </div>
-                            <div class="add-watchlist-btn slider-btn">
-                                <button><i class="fa-regular fa-bookmark"></i><a href="#">Add Watchlist</a></button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="slide-item"> 
                 </div>
             </div>
         </div>

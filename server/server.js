@@ -45,8 +45,19 @@ app.get("/trending/tv", (req, res) => {
   fetchMovieData("/trending/tv/week?", res);
 });
 
+// Movies by ID
+app.get("/movie/:movieId", (req, res) => {
+  const movieId = req.params.movieId;
+  fetchMovieData(`/movie/${movieId}?`, res);
+});
+
+// Similar Movies
+app.get("/movie/:movieId/similar", (req, res) => {
+  const movieId = req.params.movieId;
+  fetchMovieData(`/movie/${movieId}/similar?`, res);
+});
+
 app.listen(3000, () => {
-  console.log("Server is running on port 3000");
 });
 
 
