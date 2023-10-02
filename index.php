@@ -148,10 +148,7 @@
     },
       grabCursor:true,
       lazyLoading: true,
-      renderBullet: function (index, className) {
-          // You can use this function to customize the bullet HTML
-          return '<div class="' + className + '">Bullet ' + (index + 1) + '</div>';
-        },
+      loop: true,
     });
   </script>
 </body>
