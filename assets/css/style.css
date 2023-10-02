@@ -2,7 +2,8 @@
   display: flex;
   position: relative;
   overflow: hidden;
-  scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
 #hero .slider__container .swiper-wrapper {
   display: flex;
@@ -181,6 +182,7 @@
 .row-slider-card span {
   font-size: clamp(0.625rem, 0.5893rem + 0.1786vw, 0.75rem);
   font-weight: 600;
+  text-transform: capitalize;
 }
 .row-slider-card span i {
   color: var(--Yellow);
@@ -268,6 +270,7 @@
   display: block;
 }
 .vertical-small-card .slider-card-info {
+  width: 160px;
   height: 100%;
   margin-left: 10px;
 }
@@ -291,7 +294,7 @@
 @media only screen and (min-width: 1024px) {
   .vertical-small-card {
     margin-right: 50px;
-    height: 130px;
+    height: 175px;
   }
   .vertical-small-card .img-hover__container {
     width: 108px;

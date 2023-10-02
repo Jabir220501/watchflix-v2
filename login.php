@@ -7,13 +7,16 @@
     <title>Watchflix | Login</title>
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/auth.css">
-    <!-- <script defer src="./assets/js/script.js"></script> -->
+    <script defer src="./assets/js/script.js"></script>
     <!-- JS Libraries -->
     <?php
     include 'includes/js-libraries.php';
     ?>
 </head>
 <body>
+<?php
+    include 'includes/loadBar.php';
+    ?>
     <main class="login__container auth__container">
         <div class="login_wrapper auth__wrapper">
             <form action="#">

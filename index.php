@@ -8,13 +8,17 @@
     <title>Watchflix | Your Home for Movie Magic</title>
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script defer src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/getDataList.js" type="module"></script>
+    <script defer src="./assets/js/script.js" type="module"></script>
     <?php
     include 'includes/js-libraries.php';
     ?>
 </head>
 
 <body>
+    <?php
+    include 'includes/loadBar.php';
+    ?>
     <?php
     include 'includes/header/header.php';
     ?>
@@ -48,7 +52,7 @@
                                 <button><i class="fa-regular fa-bookmark"></i><a href="#">Add Watchlist</a></button>
                             </div>
                         </div>
-    
+
                     </div>
                 </div>
                 <div class="slide-item swiper-slide">
@@ -133,22 +137,22 @@
     </main>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-    const swiper = new Swiper('.swiper', {
-      slidesPerView: 'auto',
-      direction: 'horizontal',
-      autoplay: {
-        delay: 6000,
-        disableOnInteraction: false,
-        freeMode: false,
-      },
-      keyboard: {
-      enabled: true
-    },
-      grabCursor:true,
-      lazyLoading: true,
-      loop: true,
-    });
-  </script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 'auto',
+            direction: 'horizontal',
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+                freeMode: false,
+            },
+            keyboard: {
+                enabled: true
+            },
+            grabCursor: true,
+            lazyLoading: true,
+            loop: true,
+        });
+    </script>
 </body>
 
 </html>

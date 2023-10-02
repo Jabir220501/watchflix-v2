@@ -231,6 +231,7 @@
         // 10-12
         font-size: clamp(0.625rem, 0.5893rem + 0.1786vw, 0.75rem);
         font-weight: 600;
+        text-transform: capitalize;
 
         i {
             color: var(--Yellow);
@@ -328,6 +329,7 @@
     }
 
     .slider-card-info {
+        width: 160px;
         height: 100%;
         margin-left: 10px;
 
@@ -355,7 +357,7 @@
 
     @media only screen and (min-width:1024px) {
         margin-right: 50px;
-        height: 130px;
+        height: 175px;
         .img-hover__container {
             width: 108px;
             img {
