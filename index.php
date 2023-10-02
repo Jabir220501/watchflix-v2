@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script defer src="./assets/js/script.js"></script>
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <?php
     include 'includes/js-libraries.php';
     ?>

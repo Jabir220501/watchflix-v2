@@ -1,24 +1,5 @@
 const baseURL = "http://localhost:3000";
 
-const getGenre = async (genreID) => {
-  try {
-    const response = await fetch(`${baseURL}/genre/movie/list`);
-    const data = await response.json();
-    const genreArray = data.genres;
-
-    const foundGenre = genreArray.find((genre) => genre.id === genreID);
-
-    if (foundGenre) {
-      return foundGenre.name;
-    }
-
-    return null;
-  } catch (error) {
-    console.error("Error", error);
-    return null;
-  }
-};
-
 const roundToOneDecimalPlace = (number) => {
   const roundedNumber = Math.round(number * 10) / 10;
 
@@ -33,10 +14,7 @@ const justReleaseList = async () => {
       ".just-release-slider__container"
     );
     const image_url = "https://image.tmdb.org/t/p/original/";
-
     for (const movieCard of data.results) {
-      const genreName = await getGenre(movieCard.genre_ids[0]);
-
       const div = document.createElement("div");
       div.classList.add("row-slider-card", "vertical-large-card");
       div.innerHTML = `
@@ -52,7 +30,7 @@ const justReleaseList = async () => {
                 <span><i class="fa-solid fa-star"></i> ${roundToOneDecimalPlace(
                   movieCard.vote_average
                 )} <span class="info_genre">| ${
-        genreName || "N/A"
+        movieCard.genre_names[0] || "N/A"
       } • <span class="info_type-of-film">Movie</span></span></span>
               </div>
             </div>
@@ -72,7 +50,6 @@ const popularOfTheWeekList = async () => {
   try {
     const response = await fetch(`${baseURL}/trending/movie`);
     const data = await response.json();
-    console.log(data);
     const justRelease = document.querySelector(
       ".popular-of-the-week-slider__container"
     );
@@ -80,7 +57,6 @@ const popularOfTheWeekList = async () => {
 
     let increaseNumber = 1;
     for (const movieCard of data.results) {
-      const genreName = await getGenre(movieCard.genre_ids[0]);
       const div = document.createElement("div");
       div.classList.add("row-slider-card", "vertical-small-card");
       div.innerHTML = `
@@ -124,7 +100,6 @@ const randomMovies = async () => {
     const image_url = "https://image.tmdb.org/t/p/original/";
 
     for (const movieCard of data.results) {
-      const genreName = await getGenre(movieCard.genre_ids[0]);
       const div = document.createElement("div");
       div.classList.add("row-slider-card", "horizontal-card");
       div.innerHTML = `
@@ -141,7 +116,9 @@ const randomMovies = async () => {
   <div class="slider-card-rate-and-genre">
       <span><i class="fa-solid fa-star"></i> ${roundToOneDecimalPlace(
         movieCard.vote_average
-      )} <span class="info_genre">|  ${genreName || "N/A"} • <span
+      )} <span class="info_genre">|  ${
+        movieCard.genre_names[0] || "N/A"
+      } • <span
                   class="info_type-of-film">Movie</span>
           </span></span>
   </div>
@@ -158,12 +135,10 @@ const randomSeries = async () => {
   try {
     const response = await fetch(`${baseURL}/trending/tv`);
     const data = await response.json();
-    console.log(data);
     const randomSeries = document.querySelector(".series-slider__container");
     const image_url = "https://image.tmdb.org/t/p/original/";
 
     for (const serieCard of data.results) {
-      const genreName = await getGenre(serieCard.genre_ids[0]);
       const div = document.createElement("div");
       div.classList.add("row-slider-card", "horizontal-card");
       div.innerHTML = `
@@ -180,7 +155,9 @@ const randomSeries = async () => {
   <div class="slider-card-rate-and-genre">
       <span><i class="fa-solid fa-star"></i> ${roundToOneDecimalPlace(
         serieCard.vote_average
-      )} <span class="info_genre">|  ${genreName || "N/A"} • <span
+      )} <span class="info_genre">|  ${
+        serieCard.genre_names[0] || "N/A"
+      } • <span
                   class="info_type-of-film">${serieCard.media_type}</span>
           </span></span>
   </div>

@@ -10,7 +10,7 @@
         </div>
         <div class="nav-menu">
             <ul>
-                <li class="home"><a href="/Personal/myProject/watchflix-v2/">Home</a></li>
+                <li class="home"><a href="/Personal/myProjects/watchflix-v2/">Home</a></li>
                 <li class="discover"><a href="discover">Discover</a></li>
                 <li class="movie-release"><a href="movie-release">Movie Release</a></li>
                 <li class="about"><a href="about">About</a></li>

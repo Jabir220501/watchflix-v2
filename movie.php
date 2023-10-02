@@ -8,7 +8,7 @@
     <title>Watchflix | Your Home for Movie Magic</title>
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/getDataById.js"></script>
+    <script src="./assets/js/getDataById.js" type="module"></script>
     <?php
     include 'includes/js-libraries.php';
     ?>

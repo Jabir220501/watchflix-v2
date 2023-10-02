@@ -1,36 +1,12 @@
+import convertMinutesToHoursAndMinutes from "../../utils/timeUtils.js";
+import roundToOneDecimalPlace from "../../utils/numberUtils.js";
+import getYearFromDate from "../../utils/dateUtils.js";
+
 const baseURL = "http://localhost:3000";
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const movieId = urlParams.get("id");
-
-const convertMinutesToHoursAndMinutes = (minutes) => {
-  if (typeof minutes !== "number" || isNaN(minutes)) {
-    return "Invalid input";
-  }
-
-  const hours = Math.floor(minutes / 60);
-  const remainingMinutes = minutes % 60;
-
-  if (hours === 0) {
-    return `${remainingMinutes} min`;
-  } else if (remainingMinutes === 0) {
-    return `${hours} hour${hours === 1 ? "" : ""}`;
-  } else {
-    return `${hours} h${hours === 1 ? "" : ""}${remainingMinutes} min`;
-  }
-};
-
-const getYearFromDate = (dateString) => {
-  const year = dateString.substring(0, 4);
-  return year;
-};
-
-const roundToOneDecimalPlace = (number) => {
-  const roundedNumber = Math.round(number * 10) / 10;
-
-  return roundedNumber;
-};
 
 const heroFilm = async () => {
   try {
@@ -41,7 +17,7 @@ const heroFilm = async () => {
 
     heroSection.innerHTML = `
     <div class="slider-image">
-          <img src="${image_url}${data.backdrop_path}">
+          <img src="${image_url}${data.results[0].backdrop_path}">
           <div class="slider-image-overlay"></div>
       </div>
       <div class="slider-info">
@@ -49,13 +25,13 @@ const heroFilm = async () => {
               <button>Movie</button>
           </div>
           <div class="slider-title">
-              <h2>${data.title}</h2>
+              <h2>${data.results[0].title}</h2>
           </div>
           <div class="slider-film-info">
               <h5>${convertMinutesToHoursAndMinutes(
-                data.runtime
+                data.results[0].runtime
               )} • ${getYearFromDate(
-      data.release_date
+      data.results[0].release_date
     )} • Fantasy • Actions</h5>
           </div>
           <div class="slider-buttons">
@@ -78,16 +54,14 @@ const similarMovies = async () => {
   try {
     const response = await fetch(`${baseURL}/movie/${movieId}/similar`);
     const data = await response.json();
-    console.log(data);
     const similarMovies = document.querySelector(".movies-slider__container");
     const image_url = "https://image.tmdb.org/t/p/original/";
 
     for (const movieCard of data.results) {
       const div = document.createElement("div");
       div.classList.add("row-slider-card", "horizontal-card");
-      if(movieCard.backdrop_path == null){
-
-      }else{
+      if (movieCard.backdrop_path == null) {
+      } else {
         div.innerHTML = `
         <div class="img-hover__container">
         <a href="movie?id=${movieCard.id}"><img src="${image_url}${
