@@ -31,7 +31,7 @@
             <section class="movie-info-and-actor">
                 <div class="story-line">
                     <h3>Story Line</h3>
-                    <p class="story-line-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nesciunt, quod similique optio enim, assumenda eveniet maxime laudantium voluptas ipsam, cumque natus deleniti fuga minus saepe iste ad? Voluptatibus, unde.</p>
+                    <p class="story-line-desc">Loading...</p>
                 </div>
             </section>
             <!-- Movies -->

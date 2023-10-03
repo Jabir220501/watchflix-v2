@@ -48,7 +48,7 @@ button {
     padding-left: var(--main_wrapper);
 }
 
-/* Loader */
+/* LoaderBar */
 .progress {
     height: 5px;
     background: var(--Yellow);
@@ -60,7 +60,7 @@ button {
     transition: width 0.3s ease;
 }
 
-/* Cards */
+/* Styling Cards */
 .row-slider__container {
     display: flex;
     overflow-x: scroll;
@@ -83,6 +83,18 @@ button {
     color: white;
     font-weight: 500;
 }
+/* End Styling Cards */
+
+/* Styling InnerInfo */
+.story-line{
+    margin-top: 20px;
+    width: 90%;
+}
+.story-line .story-line-desc{
+    margin-top: 10px;
+    color: var(--Grey);
+}
+/* End Styling InnerInfo */
 
 /* Styling Header */
 header {

@@ -12,6 +12,7 @@ const heroFilm = async () => {
   try {
     const response = await fetch(`${baseURL}/movie/${movieId}`);
     const data = await response.json();
+    console.log(data.results[0])
     const heroSection = document.querySelector(".slide-item");
     const image_url = "https://image.tmdb.org/t/p/original/";
 
@@ -32,7 +33,7 @@ const heroFilm = async () => {
                 data.results[0].runtime
               )} • ${getYearFromDate(
       data.results[0].release_date
-    )} • Fantasy • Actions</h5>
+    )} • ${data.results[0].genres[0]["name"]} • ${data.results[0].genres[1]["name"]}</h5>
           </div>
           <div class="slider-buttons">
               <div class="watch-trailer-btn slider-btn">
@@ -44,6 +45,8 @@ const heroFilm = async () => {
           </div>
     </div>
     `;
+    const storyLineContainer = document.querySelector(".story-line-desc");
+    storyLineContainer.innerHTML = `<p class="story-line-desc">${data.results[0].overview}</p>`
   } catch (error) {
     console.error("Error", error);
   }
