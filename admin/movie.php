@@ -69,7 +69,7 @@
                                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
                                 alt="product"></span>
                     </div>
-                    <div class="product-cell sales"><span class="status active">Sales:</span></div>
+                    <div class="product-cell sales"><span class="status active">Active</span></div>
                     <div class="product-cell stock">36</div>
                 </div>
             </div>
