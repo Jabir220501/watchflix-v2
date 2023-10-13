@@ -34,6 +34,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  font-family: var(--Font);
+  color: var(--White);
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
 .app-container {
   border-radius: 4px;
   width: 100%;

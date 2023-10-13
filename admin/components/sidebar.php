@@ -1,12 +1,14 @@
 <div class="sidebar">
     <div class="sidebar-header">
         <div class="app-icon">
-            <h2>Watchflix</h2>
+            <a href="../">
+                <h2>Watchflix</h2>
+            </a>
         </div>
     </div>
     <ul class="sidebar-list">
         <li class="sidebar-list-item home-item">
-            <a href="index.php">
+            <a href="home">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-home">
@@ -17,7 +19,7 @@
             </a>
         </li>
         <li class="sidebar-list-item movie-item">
-            <a href="movie.php">
+            <a href="movie">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-shopping-bag">
@@ -29,7 +31,7 @@
             </a>
         </li>
         <li class="sidebar-list-item series-item">
-            <a href="series.php">
+            <a href="series">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-pie-chart">

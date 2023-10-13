@@ -2,7 +2,7 @@ import convertMinutesToHoursAndMinutes from "../../utils/timeUtils.js";
 import roundToOneDecimalPlace from "../../utils/numberUtils.js";
 import getYearFromDate from "../../utils/dateUtils.js";
 
-const baseURL = "http://localhost:3000";
+const baseURL = "http://localhost:3000/api";
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);

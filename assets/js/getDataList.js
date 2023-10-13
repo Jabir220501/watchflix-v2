@@ -1,6 +1,6 @@
 import roundToOneDecimalPlace from "../../utils/numberUtils.js";
 
-const baseURL = "http://localhost:3000";
+const baseURL = "http://localhost:3000/api";
 
 const justReleaseList = async () => {
   try {

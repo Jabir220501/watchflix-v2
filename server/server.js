@@ -52,38 +52,38 @@ async function fetchMovieData(apiEndpoint, res) {
 }
 
 // Genre
-app.get("/genre/movie/list", (req, res) => {
+app.get("/api/genre/movie/list", (req, res) => {
   fetchMovieData("/genre/movie/list?", res);
 });
 
 // Just Release
-app.get("/movie/upcoming", (req, res) => {
+app.get("/api/movie/upcoming", (req, res) => {
   fetchMovieData("/movie/upcoming?", res);
 });
 
 // Popular Movie
-app.get("/trending/movie", (req, res) => {
+app.get("/api/trending/movie", (req, res) => {
   fetchMovieData("/trending/all/week?", res);
 });
 
 // Random Movies
-app.get("/discover/movie", (req, res) => {
+app.get("/api/discover/movie", (req, res) => {
   fetchMovieData("/discover/movie?sort_by=popularity.desc&", res);
 });
 
 // Random Series
-app.get("/trending/tv", (req, res) => {
+app.get("/api/trending/tv", (req, res) => {
   fetchMovieData("/trending/tv/week?", res);
 });
 
 // Movies by ID
-app.get("/movie/:movieId", (req, res) => {
+app.get("/api/movie/:movieId", (req, res) => {
   const movieId = req.params.movieId;
   fetchMovieData(`/movie/${movieId}?`, res);
 });
 
 // Similar Movies
-app.get("/movie/:movieId/similar", (req, res) => {
+app.get("/api/movie/:movieId/similar", (req, res) => {
   const movieId = req.params.movieId;
   fetchMovieData(`/movie/${movieId}/similar?`, res);
 });

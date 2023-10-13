@@ -56,12 +56,12 @@ registrationForm.addEventListener("submit", function (e) {
       if (data.error) {
         errorModal.classList.add("message-modal-active");
         errorMessage.textContent = data.error;
-      }else{
+      } else {
         successModal.classList.add("message-modal-active");
         successMessage.textContent = data.success;
         setTimeout(() => {
           document.location.href =
-            "http://localhost/Personal/myProject/watchflix-v2";
+            "http://localhost/Personal/myProjects/watchflix-v2";
         }, 1500);
       }
     })
